@@ -16,7 +16,7 @@ export class UsersController {
 
     @Post()
     @ApiBody({ type: UserDto})
-    create(@Body() user:User): User {
+    create(@Body() user: UserDto): User {
         return this.usersService.create(user)
     }
 }
