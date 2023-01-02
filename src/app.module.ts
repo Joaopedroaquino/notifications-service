@@ -7,12 +7,14 @@ import { UsersModule } from './users/users.module';
 import { UsersService } from './users/users.service';
 
 @Module({
-  imports: [UsersModule, TypeOrmModule.forRoot({
+  imports: [UsersModule,
+   TypeOrmModule.forRoot({
     type: 'sqlite',
     database: 'db',
-    entities: [__dirname + '/**/*.entity{.ts, .js}'],
+    entities: [__dirname + '/**/*.entity{.ts,.js}'],
     synchronize: true
-  })],
+  })
+],
   controllers: [AppController, UsersController],
   providers: [AppService, UsersService],
 })
