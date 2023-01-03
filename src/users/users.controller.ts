@@ -4,8 +4,6 @@ import { ApiBody } from '@nestjs/swagger';
 import { Observable } from 'rxjs';
 import { UserEntity } from './database/user.entity';
 import { UserDto } from './dtos/user.dto';
-import { User } from './interfaces/user.interface';
-import { UsersService } from './users.service';
 
 @Controller('users')
 export class UsersController implements OnModuleInit {
