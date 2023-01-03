@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { UsersController } from './users/users.controller';
 import { UsersModule } from './users/users.module';
 import { UsersService } from './users/users.service';
+import { DatabaseModule } from './database/database.module';
 
 @Module({
   imports: [UsersModule,
@@ -13,7 +14,8 @@ import { UsersService } from './users/users.service';
     database: 'db',
     entities: [__dirname + '/**/*.entity{.ts,.js}'],
     synchronize: true
-  })
+  }),
+   DatabaseModule
 ],
   controllers: [AppController],
   providers: [AppService],
