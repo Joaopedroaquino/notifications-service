@@ -8,13 +8,8 @@ import { UsersService } from './users/users.service';
 import { DatabaseModule } from './database/database.module';
 
 @Module({
-  imports: [UsersModule,
-   TypeOrmModule.forRoot({
-    type: 'sqlite',
-    database: 'db',
-    entities: [__dirname + '/**/*.entity{.ts,.js}'],
-    synchronize: true
-  }),
+  imports: [
+   UsersModule,
    DatabaseModule
 ],
   controllers: [AppController],
