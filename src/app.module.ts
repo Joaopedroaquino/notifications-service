@@ -15,7 +15,8 @@ import { UsersService } from './users/users.service';
     synchronize: true
   })
 ],
-  controllers: [AppController, UsersController],
-  providers: [AppService, UsersService],
+  controllers: [AppController],
+  providers: [AppService],
+  
 })
 export class AppModule {}
