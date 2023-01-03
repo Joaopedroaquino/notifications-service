@@ -10,9 +10,9 @@ import { UserEntity } from 'src/users/database/user.entity';
             username: 'postgres',
             password: 'postgres',
             database: 'user',
-            entities: [UserEntity],           
+            entities: [UserEntity],
             synchronize: true
-          }),
+        }),
     ]
 })
-export class DatabaseModule {}
+export class DatabaseModule { }

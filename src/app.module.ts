@@ -9,11 +9,11 @@ import { DatabaseModule } from './database/database.module';
 
 @Module({
   imports: [
-   UsersModule,
-   DatabaseModule
-],
+    UsersModule,
+    DatabaseModule
+  ],
   controllers: [AppController],
   providers: [AppService],
-  
+
 })
-export class AppModule {}
+export class AppModule { }

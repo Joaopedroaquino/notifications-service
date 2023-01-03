@@ -7,17 +7,17 @@ import { UsersService } from './users.service';
 
 @Controller('users')
 export class UsersController {
-    constructor(private usersService: UsersService){}
+    constructor(private usersService: UsersService) { }
 
     @Get()
-   async list(): Promise<UserEntity[]> {
+    async list(): Promise<UserEntity[]> {
         return this.usersService.list()
 
     }
 
     @Post()
-    @ApiBody({ type: UserDto})
-   async create(@Body() user: UserDto): Promise <UserEntity> {
+    @ApiBody({ type: UserDto })
+    async create(@Body() user: UserDto): Promise<UserEntity> {
         return await this.usersService.create(user)
     }
 }
