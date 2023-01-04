@@ -26,7 +26,6 @@ export class UsersController implements OnModuleInit {
     async onModuleInit() {
         const requestPatters = [
             'find-all-user',
-            'create-user'
         ];
 
         requestPatters.forEach(async pattern => {
