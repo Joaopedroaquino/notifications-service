@@ -1,4 +1,4 @@
-import { Body, Controller, Get, OnModuleInit, Post } from '@nestjs/common';
+import { Body, Controller, Get, OnModuleInit, Param, Post } from '@nestjs/common';
 import { Client, ClientKafka, Transport } from '@nestjs/microservices';
 import { ApiBody, ApiTags } from '@nestjs/swagger';
 import { Observable } from 'rxjs';
@@ -26,6 +26,7 @@ export class UsersController implements OnModuleInit {
     async onModuleInit() {
         const requestPatters = [
             'find-all-user',
+            'find-user'
         ];
 
         requestPatters.forEach(async pattern => {
@@ -37,6 +38,12 @@ export class UsersController implements OnModuleInit {
     @Get()
      list(): Observable<User[]> {
         return this.client.send('find-all-user', {})
+
+    }
+
+    @Get(':id')
+     find(@Param('id') id: number): Observable<User> {
+        return this.client.send('find-user', {id})
 
     }
 
