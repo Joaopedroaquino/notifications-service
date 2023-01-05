@@ -57,7 +57,7 @@ export class UsersController implements OnModuleInit {
     @ApiBody({ type: UserDto })
      update(@Body() {name, email, phone, password},  @Param('id') id:number) {
         const payload = {id, name, email, phone, password}
-        return  this.client.emit('create-user', payload)
+        return  this.client.emit('update-user', payload)
 
     }
 }
