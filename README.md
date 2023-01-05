@@ -36,6 +36,8 @@ $ yarn
 ```bash
 # watch mode
 $ yarn start:dev
+$ docker-compose up -d
+
 ```
 
 <!-- ## Test
