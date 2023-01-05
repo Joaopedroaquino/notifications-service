@@ -1,4 +1,4 @@
-import { Body, Controller, Get, OnModuleInit, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, OnModuleInit, Param, Post, Put } from '@nestjs/common';
 import { Client, ClientKafka, Transport } from '@nestjs/microservices';
 import { ApiBody, ApiTags } from '@nestjs/swagger';
 import { Observable } from 'rxjs';
@@ -60,4 +60,10 @@ export class UsersController implements OnModuleInit {
         return  this.client.emit('update-user', payload)
 
     }
+
+    @Delete(':id')
+    remove(@Param('id') id: number) {
+       return this.client.send('delete-user', {id})
+
+   }
 }
