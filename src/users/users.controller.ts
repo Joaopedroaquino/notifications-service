@@ -72,6 +72,11 @@ export class UsersController implements OnModuleInit {
     return this.client.emit('activate-user', {id})
    }
 
+   @Patch(':id/inactivate')
+   inactivate(@Param('id')id: number){
+    return this.client.emit('inactivate-user', {id})
+   }
+
  
 
 }
