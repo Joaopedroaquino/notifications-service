@@ -12,7 +12,7 @@
 
 
 
-## Language && Tools
+## 🔧 Language && Tools
  ![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white)
  ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
  ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
@@ -21,19 +21,19 @@
  ![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)
  
   
-## Services
+## 🌐 Services
   <a href="https://github.com/Joaopedroaquino/user-engine"><img src="https://img.shields.io/badge/Microservice-User--Engine-green?style=for-the-badge" alt="user-engine" /></a>
  
 
 
 
-## Installation
+## ✅ Installation
 
 ```bash
 $ yarn
 ```
 
-## Running the app
+## 🚀 Running the app
 
 ```bash
 # watch mode
